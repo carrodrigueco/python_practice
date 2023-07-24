@@ -25,7 +25,7 @@ while True:
         email = parts[1]
         org = email[email.find("@")+1:]
 
-        curs.execute("""SELECT count FROM Counts where org = ? """, (org,))
+        curs.execute("""SELECT count FROM Counts WHERE org = ? """, (org,))
         row = curs.fetchone()
 
         if row is None:
